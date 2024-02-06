@@ -47,9 +47,11 @@ def main():
             width=400, # The actual size of most gifs on GIPHY are really small, and using the column-width parameter would make it weirdly big. So I would suggest adjusting the width manually!
         )
     while True:
-        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        ist = pytz.timezone('Asia/Kolkata')
+        current_time = datetime.datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S")
         time_placeholder.markdown(f'<div class="time-box"><p class="time-display">{current_time}</p></div>', unsafe_allow_html=True)
         time.sleep(1)
+
 
 
 if __name__ == "__main__":
