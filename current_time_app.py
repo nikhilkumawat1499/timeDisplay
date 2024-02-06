@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import datetime
 import time
+import pytz
 
 def main():
     st.title("Genz time display, instead of looking at watch, just scan the QR code !!")
