@@ -49,10 +49,13 @@ def main():
         )
     while True:
         ist = pytz.timezone('Asia/Kolkata')
-        current_time = datetime.datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S")
-        time_placeholder.markdown(f'<div class="time-box"><p class="time-display">{current_time}</p></div>', unsafe_allow_html=True)
+        current_datetime = datetime.datetime.now(ist)
+        current_time = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+        current_day = current_datetime.strftime("%A")
+        current_date = current_datetime.strftime("%d %B %Y")
+        display_content = f'<div class="time-box"><p class="time-display">Day: {current_day}</p><p class="time-display">Date: {current_date}</p><p class="time-display">Time: {current_time}</p></div>'
+        time_date_placeholder.markdown(display_content, unsafe_allow_html=True)
         time.sleep(1)
-
 
 
 if __name__ == "__main__":
