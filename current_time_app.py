@@ -4,7 +4,7 @@ import datetime
 import time
 
 def main():
-    st.title("Fancy Current Time Display")
+    st.title("Genz time display, instead of looking at watch, just scan the QR code !!")
     
     # Center-align the title
     st.markdown(
