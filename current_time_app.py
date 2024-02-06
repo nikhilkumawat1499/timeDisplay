@@ -40,8 +40,8 @@ def main():
         unsafe_allow_html=True
     )
 
-    # Display the current time in a black box
-    time_placeholder = st.empty()
+     # Display the current time and date in a black box
+    time_date_placeholder = st.empty()
     # Display Shinchan dancing GIF
     st.image(
             "shinchan.webp", # I prefer to load the GIFs using GIPHY
